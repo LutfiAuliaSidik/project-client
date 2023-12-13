@@ -1,1 +1,6 @@
-
+@media screen and (max-width: 480px) {
+  .header .profile h1,
+  .header .profile svg {
+    display: none !important;
+  }
+}

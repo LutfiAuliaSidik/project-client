@@ -5,3 +5,22 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+:root {
+  --color-default: rgba(25, 32, 48, 1);
+  --color-shoope: rgba(254, 94, 0, 1);
+  --color-component: rgba(255, 255, 255, 1);
+  --color-background: rgba(246, 247, 251, 1);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--color-background);
+}
+
+.container.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

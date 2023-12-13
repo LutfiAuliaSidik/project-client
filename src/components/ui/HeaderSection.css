@@ -1,0 +1,43 @@
+.container.header {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-component);
+}
+.header .icons {
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+}
+.header .icons > svg {
+  color: var(--color-shoope);
+  font-size: 25px;
+}
+.header .icons > h1 {
+  color: var(--color-default);
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.header .profile {
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+}
+.header .profile img {
+  display: block;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.header .profile h1 {
+  color: var(--color-default);
+  font-size: 15px;
+}
+.header .profile svg {
+  color: var(--color-default);
+  font-size: 15px;
+}
+
