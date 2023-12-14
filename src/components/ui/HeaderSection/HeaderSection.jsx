@@ -1,6 +1,6 @@
 import * as Icon from 'react-bootstrap-icons'
 import './HeaderSection.css'
-import profile from '../../assets/kurumi.jpg'
+import profile from '../../../assets/kurumi.jpg'
 
 const HeaderSection = () => {
   return (

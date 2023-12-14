@@ -1,4 +1,7 @@
 .container.header {
+  z-index: 999;
+  position: sticky;
+  top: 0;
   display: flex;
   width: 100%;
   padding: 10px;

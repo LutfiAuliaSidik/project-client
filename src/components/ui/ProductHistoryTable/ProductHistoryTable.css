@@ -1,0 +1,119 @@
+.container.product-history-table {
+  margin: 15px 10px;
+  padding: 15px;
+  border-radius: 3px;
+  background: var(--color-component);
+}
+.product-history-table h1 {
+  color: var(--color-shoope);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.product-history-table table {
+  width: 100%;
+  margin: 10px 0 0;
+  border-collapse: collapse;
+}
+.product-history-table table th,
+.product-history-table table td {
+  height: 35px;
+  font-size: 14px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.product-history-table table th {
+  color: #BABABA;
+}
+.product-history-table table tbody tr:nth-child(even) {
+  background: var(--color-background);
+}
+.product-history-table table tbody tr td[data-title="product"] .w-p {
+  display: flex;
+  gap: 0 8px;
+  margin: 5px 0;
+  align-items: center;
+}
+.product-history-table table tbody tr td[data-title="product"] .w-p p {
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-history-table table tbody tr td[data-title="product"] img {
+  display: block;
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.product-history-table .status {
+  display: inline-block;
+  width: 60px;
+  padding: 2px 0;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.product-history-table table tbody tr td[data-status='delete'] .status {
+  color: rgba(255, 0, 0, 1);
+  background: rgba(255, 0, 0, .1);
+} 
+
+.product-history-table table tbody tr td[data-status='add'] .status {
+  color: rgba(142, 185, 178, 1);
+  background: rgba(142, 185, 178, .1);
+}
+
+.product-history-table table tbody tr td[data-status='update'] .status {
+  color: rgba(255, 91, 159, 1);
+  background: rgba(255, 91, 159, .1);
+}
+
+.product-history-table table thead th:last-child,
+.product-history-table table tbody td:last-child,
+.product-history-table table thead th:nth-child(1),
+.product-history-table table tbody td[data-title="no"],
+.product-history-table table thead th:nth-child(2),
+.product-history-table table tbody td[data-title="id"],
+.product-history-table table thead th:nth-child(5),
+.product-history-table table tbody td[data-title="status"] {
+  text-align: center !important;
+}
+
+.product-history-table .icon {
+  display: inline-block;
+  color: rgba(255, 0, 0, 1);
+  padding: 5px;
+  text-align: center;
+  border-radius: 3px;
+  transform: translateY(2px);
+  background: rgba(255, 0, 0, .1);
+}
+
+.product-history-table .icon svg {
+  display: block;
+}
+
+@media screen and (max-width: 440px) {
+  .product-history-table table thead tr {
+    display: none;
+  }
+  .product-history-table table tr:nth-child(even) {
+    padding: 10px 0;
+    background: rgba(246, 247, 251, 1);
+  }
+  .product-history-table table tbody tr {
+    display: block;
+    margin: 15px 0;
+  }
+  .product-history-table table tbody tr td {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-history-table table tbody tr td::before {
+    content: attr(data-title) ':';
+    color: var(--color-default);
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,38 @@
+.container.list-product {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 15px 10px;
+}
+
+.l-product {
+  padding: 0 0 8px 0;
+  max-width: 160px;
+  border-radius: 3px;
+  background: var(--color-component);
+}
+.l-product figure img {
+  display: block;
+  width: 160px;
+  height: 195px;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+.l-product figure figcaption {
+  margin: 5px;
+}
+.l-product figure figcaption h1 {
+  color: var(--color-default);
+  font-size: 14px;
+}
+.l-product figure figcaption p {
+  color: var(--color-shoope);
+  margin: 6px 0;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+.l-product figure figcaption p::before {
+  content: 'Rp';
+  font-size: 14px;
+}
