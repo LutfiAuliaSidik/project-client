@@ -1,14 +1,13 @@
 import * as Icon from 'react-bootstrap-icons'
-import HeaderSection from '../components/ui/HeaderSection/HeaderSection'
 import FlexWrap from '../components/FlexWrap'
 import CardSection from '../components/ui/CardSection/CardSection'
 import ListProduct from '../components/ui/ListProduct/ListProduct'
+import ProductHistoryTable from '../components/ui/ProductHistoryTable/ProductHistoryTable'
 
 const Home = () =>
 {
   return (
     <>
-      <HeaderSection />
       <FlexWrap>
         <CardSection 
           title='total product'
@@ -24,6 +23,7 @@ const Home = () =>
         />
       </FlexWrap>
       <ListProduct />
+      {/* <ProductHistoryTable /> */}
     </> 
   )
 }
