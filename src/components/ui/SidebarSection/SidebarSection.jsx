@@ -37,7 +37,7 @@ const SidebarSection = ({ children }) =>
           <Icon.Grid1x2 />
           <h1>dashboard</h1>
         </div>
-        <nav className='wrapper sidebar-menu'>
+        <nav className='wrapper sidebar-menu' onClick={() => handlerButton()}>
           <h1>main menu</h1>
           <ul className='main-menu'>
             {
