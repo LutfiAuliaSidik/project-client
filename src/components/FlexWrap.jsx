@@ -1,10 +1,8 @@
 const FlexWrap = ({ children }) => {
   return (
-    <>
-      <div className='container flex-wrap'>
-        { children }
-      </div>
-    </>
+    <div className='container flex-wrap'>
+      { children }
+    </div>
   )
 }
 

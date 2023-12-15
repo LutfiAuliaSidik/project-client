@@ -40,11 +40,9 @@ const ListProduct = () => {
   }
 
   return (
-    <>
-      <section className='container list-product'>
-        <Product />
-      </section>
-    </>
+    <section className='container list-product'>
+      <Product />
+    </section>
   )
 }
 
