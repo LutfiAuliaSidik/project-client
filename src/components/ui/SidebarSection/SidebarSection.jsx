@@ -3,34 +3,71 @@ import * as Icon from 'react-bootstrap-icons'
 import { useNavbarStatus } from '../../../stores/app'
 import { NavLink } from 'react-router-dom'
 
-const SidebarSection = () =>
+const SidebarSection = ({ children }) =>
 {
-  const { status } = useNavbarStatus(state => ({ status: state.status }))
+  const { status, setStatus } = useNavbarStatus(state => ({ 
+    status: state.status,
+    setStatus: state.setStatus
+  }))
 
-  return ( 
-    <sidebar className={`container sidebar ${ status ? 'active' : ''}`}>
-      <div className='wrapper sidebar-header'>
-        <Icon.Grid1x2 />
-        <h1>dashboard</h1>
-      </div>
-      <div className='wrapper sidebar-menu'>
-        <h1>main menu</h1>
-        <ul>
-          <NavLink to='/'>
+  const navbarMainMenuItems = [
+    {
+      path : '/',
+      icon : <Icon.GridFill/>,
+      name : 'dashboard',
+    },
+    {
+      path : '/product',
+      icon : <Icon.BoxSeamFill/>,
+      name : 'product',
+    },
+    {
+      path : '/add-product',
+      icon : <Icon.PlusCircleFill/>,
+      name : 'add product',
+    }
+  ]
+
+  const handlerButton = () => !status ? setStatus(true) : setStatus(false)
+
+  return (
+    <div className='container main-app'>
+      <sidebar className={`container sidebar ${ status ? 'active' : ''}`}>
+        <div className='wrapper sidebar-header'>
+          <Icon.Grid1x2 />
+          <h1>dashboard</h1>
+        </div>
+        <nav className='wrapper sidebar-menu'>
+          <h1>main menu</h1>
+          <ul className='main-menu'>
+            {
+              navbarMainMenuItems.map(menuMain => {
+                return (
+                  <NavLink to={menuMain.path}>
+                    <li>  
+                      { menuMain.icon }
+                      <p>{ menuMain.name }</p>
+                    </li>
+                  </NavLink>
+                ) 
+              }) 
+            }
+          </ul>
+          <ul className='menu-footer'>
             <li>
-              <Icon.GridFill/>
-              <p>dashboard</p>
+              <Icon.BoxArrowLeft />
+              <p>log out</p>
             </li>
-          </NavLink>
-          <NavLink to='/product'>
-            <li>
-              <Icon.BoxSeamFill/>
-              <p>product</p>
-            </li>
-          </NavLink>
-        </ul>
-      </div>
-    </sidebar>
+          </ul>
+          <div className='icon-back' onClick={() => handlerButton()}>
+            <Icon.ArrowBarLeft />
+          </div>
+        </nav>
+      </sidebar>
+      <main className='container main-page'>
+        { children }
+      </main>
+    </div>
   )
 }
 

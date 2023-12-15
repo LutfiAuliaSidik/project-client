@@ -1,8 +1,8 @@
 const FlexWrap = ({ children }) => {
   return (
-    <div className='container flex-wrap'>
+    <section className='container flex-wrap'>
       { children }
-    </div>
+    </section>
   )
 }
 

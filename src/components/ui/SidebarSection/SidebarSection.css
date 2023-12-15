@@ -1,22 +1,21 @@
 .container.sidebar {
-  z-index: 999;
-  position: fixed;
+  z-index: 9991;
+  position: fixed; 
   top: 0;
   left: 0;
   height: 100vh;
-  min-width: 180px;
+  width: 180px;
   padding: 15px; 
   background: var(--color-default);
   transition: all 1s ease;
-  transform: translateX(-500px);
 }
 .container.sidebar.active {
   transform: translateX(0);
 }
 .wrapper.sidebar-header {
   display: flex;
-  gap: 0 15px;
-  padding: 15px 0;
+  gap: 0 8px;
+  padding: 0 0 15px 0; 
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--color-component);
@@ -67,4 +66,23 @@
   font-size: 15px;
   text-transform: capitalize;
   transition: all .3s ease;
+}
+.sidebar-menu .icon-back {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: -15px;
+  color: var(--color-component);
+  width: 30px;
+  height: 30px;
+  line-height: 35px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--color-shoope);
+}
+.sidebar-menu .menu-footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 30px);
 }

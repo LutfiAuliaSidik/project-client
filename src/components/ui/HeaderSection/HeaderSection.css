@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   display: flex;
-  width: 100%;
+  width: 100vw;
   padding: 10px;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +15,7 @@
   align-items: center;
 }
 .header .icons > svg {
+  display: none;
   color: var(--color-shoope);
   font-size: 25px;
 }

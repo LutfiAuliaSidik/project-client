@@ -23,7 +23,7 @@ const Home = () =>
         />
       </FlexWrap>
       <ListProduct />
-      {/* <ProductHistoryTable /> */}
+      {/* <ProductHistoryTable />  */}
     </> 
   )
 }

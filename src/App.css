@@ -1,6 +1,27 @@
+/* if screen show in mobile */
+
 @media screen and (max-width: 480px) {
+  /* responsif header */
   .header .profile h1,
   .header .profile svg {
     display: none !important;
+  }
+
+  .header .icons > svg {
+    display: block !important;
+  }
+
+  /* responsif sidebar */
+
+  .container.sidebar {
+    transform: translateX(-500px);
+  }
+
+  .container.main-page {
+    margin-left: 0 !important;
+  }
+
+  .sidebar-menu .icon-back {
+    display: block !important;
   }
 }

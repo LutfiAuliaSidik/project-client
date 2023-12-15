@@ -24,3 +24,11 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+.container.main-app {
+  display: flex;
+}
+
+.container.main-page {
+  margin-left: 180px;
+}
