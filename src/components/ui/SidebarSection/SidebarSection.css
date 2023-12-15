@@ -49,6 +49,10 @@
   align-items: center;
   cursor: pointer;
 }
+.sidebar-menu .active li svg,
+.sidebar-menu .active li p {
+  color: var(--color-shoope) !important;
+}
 .sidebar-menu ul li:hover svg,
 .sidebar-menu ul li:hover p {
   color: var(--color-shoope) !important;
