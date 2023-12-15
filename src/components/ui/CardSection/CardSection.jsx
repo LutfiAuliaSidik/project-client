@@ -1,6 +1,6 @@
 import './CardSection.css'
 
-const CardSection = ({ color, title, value, icons, bgColor }) => {
+const CardInfo = ({ color, title, value, icons, bgColor }) => {
 
   const cardStyle = {
     '--color-style': color || 'rgba(254, 94, 0, 1)',
@@ -22,4 +22,4 @@ const CardSection = ({ color, title, value, icons, bgColor }) => {
   )
 }
 
-export default CardSection
+export default CardInfo
