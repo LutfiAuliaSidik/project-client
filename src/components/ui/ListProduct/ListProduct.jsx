@@ -1,12 +1,13 @@
 import './ListProduct.css'
 import productImage from '../../../assets/kurumi.jpg'
+import { Link } from 'react-router-dom'
 
 const ListProduct = () => {
 
   const dataProduct = [
     { 
       image: productImage,
-      nama: 'Product 1 tokisaki kurumi lutfi aulia sidik',
+      nama: 'Product 1 tokisaki kurumi',
       harga: '188.000,00'
     },
     { 
@@ -21,10 +22,13 @@ const ListProduct = () => {
     }
   ]
 
+  const getSlugProduct = (index) => dataProduct[index].nama.replaceAll(' ', '-');
+  
+
   const Product = () => {
-    return dataProduct.map(product => {
+    return dataProduct.map((product, index) => {
       return (
-         <a href="">
+        <Link to={`/detail/${getSlugProduct(index)}`}>
           <div className='l-product'>
             <figure>
               <img src={ product.image } alt='' loading='lazy' />
@@ -34,7 +38,7 @@ const ListProduct = () => {
               </figcaption>
             </figure>
           </div>
-        </a>       
+        </Link>
       )
     })
   }

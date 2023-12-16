@@ -1,6 +1,6 @@
 import * as Icon from 'react-bootstrap-icons'
 import FlexWrap from '../components/FlexWrap'
-import CardInfo from '../components/ui/CardSection/CardSection'
+import CardInfo from '../components/ui/CardInfo/CardInfo'
 import ListProduct from '../components/ui/ListProduct/ListProduct'
 import ProductHistoryTable from '../components/ui/ProductHistoryTable/ProductHistoryTable'
 

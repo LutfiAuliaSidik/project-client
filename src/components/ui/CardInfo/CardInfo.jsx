@@ -1,4 +1,4 @@
-import './CardSection.css'
+import './CardInfo.css'
 
 const CardInfo = ({ color, title, value, icons, bgColor }) => {
 
